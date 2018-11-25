@@ -1,7 +1,8 @@
 package io.github.jfyoteau.androidtutorial
 
-import android.support.test.InstrumentationRegistry
-import android.support.test.runner.AndroidJUnit4
+import android.app.Application
+import androidx.test.core.app.ApplicationProvider
+import androidx.test.ext.junit.runners.AndroidJUnit4
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,10 +16,12 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
     @Test
     fun useAppContext() {
         // Context of the app under test.
-        val appContext = InstrumentationRegistry.getTargetContext()
+        val appContext: Application = ApplicationProvider.getApplicationContext()
         assertEquals("io.github.jfyoteau.androidtutorial", appContext.packageName)
     }
+
 }
