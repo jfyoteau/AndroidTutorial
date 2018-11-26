@@ -20,3 +20,13 @@ Android チュートリアル
 　　　　　・`import androidx.test.runner.AndroidJUnit4`を`import androidx.test.ext.junit.runners`に変更する  
 　　　　　・`import androidx.test.InstrumentationRegistry`を`import import androidx.test.core.app.ApplicationProvider`に変更する  
 　　　　　・`val appContext = InstrumentationRegistry.getTargetContext()`を`val appContext: Application = ApplicationProvider.getApplicationContext()`に変更する
+
+2. メインアクティビティの作成  
+　・テンプレート：`Empty Activity`  
+　・Activity Name: `MainActivity`  
+　・Generate Layout File: `ON`  
+　・Layout Name: `main_activity`  
+　・Launcher Activity: `ON`  
+　・Backwards Compatibility (AppCompat): `ON`  
+　・Package Name: `io.github.jfyoteau.androidtutorial.ui`  
+　・Source Language: `Kotlin`
