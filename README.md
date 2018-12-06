@@ -29,4 +29,8 @@ Android チュートリアル
 　・Launcher Activity: `ON`  
 　・Backwards Compatibility (AppCompat): `ON`  
 　・Package Name: `io.github.jfyoteau.androidtutorial.ui`  
-　・Source Language: `Kotlin`
+　・Source Language: `Kotlin`  
+2.1 `main_activity.xml`のレイアウトを変更する  
+・`ConstraintLayout`を`LinearLayout`へ変更する  
+・`LinearLayout`の`orientation`プロパティを`vertical`に設定する  
+2.2 テキストビューと2つのボタンを追加する  
