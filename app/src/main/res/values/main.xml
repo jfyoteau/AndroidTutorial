@@ -3,6 +3,7 @@
     <string name="main_description">メニューを選択してください</string>
     <string name="main_menu1">メニュー1</string>
     <string name="main_menu2">Toast</string>
+    <string name="main_menu3">他のアクティビティ</string>
 
     <string name="main_toast_message">This is a toast!</string>
 </resources>

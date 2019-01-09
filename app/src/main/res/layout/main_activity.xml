@@ -27,4 +27,10 @@
         android:layout_height="wrap_content"
         android:text="@string/main_menu2" />
 
+    <Button
+        android:id="@+id/button_menu3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu3" />
+
 </LinearLayout>

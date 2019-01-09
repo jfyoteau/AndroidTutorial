@@ -1,5 +1,6 @@
 package io.github.jfyoteau.androidtutorial
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -26,6 +27,17 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, R.string.main_toast_message, Toast.LENGTH_SHORT).show()
             }
         }
+
+        findViewById<Button>(R.id.button_menu3).apply {
+            setOnClickListener {
+                startOtherActivity()
+            }
+        }
+    }
+
+    private fun startOtherActivity() {
+        val intent = Intent(this, OtherActivity::class.java)
+        startActivity(intent)
     }
 
 }
