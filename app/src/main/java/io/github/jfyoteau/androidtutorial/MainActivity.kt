@@ -16,6 +16,11 @@ class MainActivity : AppCompatActivity() {
         setupViews()
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Log.d("AndroidTutorial", "requestCode: $requestCode - resultCode: $resultCode")
+    }
+
     private fun setupViews() {
         val menu1Button: Button = findViewById(R.id.button_menu1)
         menu1Button.setOnClickListener {
@@ -33,11 +38,22 @@ class MainActivity : AppCompatActivity() {
                 startOtherActivity()
             }
         }
+
+        findViewById<Button>(R.id.button_menu4).apply {
+            setOnClickListener {
+                startActivityWithResult()
+            }
+        }
     }
 
     private fun startOtherActivity() {
         val intent = Intent(this, OtherActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun startActivityWithResult() {
+        val intent = Intent(this, ResultActivity::class.java)
+        startActivityForResult(intent, 1)
     }
 
 }

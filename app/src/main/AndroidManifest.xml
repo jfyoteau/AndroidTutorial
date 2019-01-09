@@ -19,11 +19,17 @@
         </activity>
         <!-- /メインアクティビティ -->
 
+
         <!-- 他のアクティビティ -->
         <activity
             android:name=".OtherActivity"
             android:label="@string/other_title" />
         <!-- /他のアクティビティ -->
+
+        <!-- 結果のアクティビティ -->
+        <activity android:name=".ResultActivity" />
+        <!-- /結果のアクティビティ -->
+
     </application>
 
 </manifest>
