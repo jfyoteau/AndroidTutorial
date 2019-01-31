@@ -130,3 +130,22 @@ class Activity2 : AppCompatActivity() {
 
 }
 ```
+
+# 外部アクティビティの呼び出し
+
+アプリケーションの設定画面へ移動します。
+```kotlin
+class Activity1 : AppCompatActivity() {
+
+    // ...
+
+    fun callApplicationSettings() {
+        val intent = Intent()
+        intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+        val uri = Uri.fromParts("package", this.packageName, null)
+        intent.data = uri
+        startActivity(intent)
+    }
+
+}
+```
