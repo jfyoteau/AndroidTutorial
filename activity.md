@@ -48,7 +48,7 @@ class Activity2 : AppCompatActivity() {
 
     fun sendResultToCaller() {
         // Set the "resultCode" value
-        this.result = Activity.RESULT_OK
+        setResult(Activity.RESULT_OK)
         // Finish the activity
         finish()
     }
