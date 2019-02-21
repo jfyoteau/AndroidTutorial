@@ -149,3 +149,90 @@ class Activity1 : AppCompatActivity() {
 
 }
 ```
+
+# 端末のバックボタンの管理
+
+'''kotlin
+class MyActivity {
+    // ...
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
+
+    // ...
+}
+'''
+
+## バックの操作を止まる
+
+```kotlin
+class MyActivity {
+    // ...
+
+    override fun onBackPressed() {
+        // superのメソッドを呼び出しません。
+    }
+
+    // ...
+}
+```
+## アプリケーションの終了のサンプル
+
+端末のバックボタンを管理する為に`Activity`クラスの`fun onBackPressed()`メソッドをoverrideします。
+
+```kotlin
+class MyActivity : AppCompatActivity() {
+    // ...
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
+
+    // ...
+}
+```
+
+※`super.onBackPressed()`を呼び出す時にフラグメントのバックスタックが空の場合はアクティビティが終了します。
+
+## バックの操作を止まる
+
+```kotlin
+class MyActivity : AppCompatActivity() {
+    // ...
+
+    override fun onBackPressed() {
+        // superのメソッドを呼び出しません。
+    }
+
+    // ...
+}
+```
+## アプリケーションの終了のサンプル
+
+端末のバックボタンをタップする時に完了確認ダイアログを表示します。  
+- `Yes` ⇒ アクティビティを終了します。
+- `No` ⇒ 何もしません。
+
+```kotlin
+class MyActivity : AppCompatActivity() {
+    // ...
+
+    override fun onBackPressed() {
+        askToFinish(this)
+    }
+
+    private fun askToFinish(activity: FragmentActivity) {
+        AlertDialog.Builder(activity)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle("Closing activity")
+            .setMessage("Are you sure you want to close this activity")
+            .setPositiveButton("Yes") { _, _ ->
+                activity.finish()
+            }.setNegativeButton("No", null)
+            .show()
+    }
+
+    // ...
+}
+```
