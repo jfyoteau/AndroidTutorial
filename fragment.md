@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         fm.beginTransaction().apply {
             val fragment = MyFragment()
             add(R.id.fragment_container, fragment)
-        }.commitNow()
+        }.commit()
     }
 
 }
@@ -124,5 +124,74 @@ class MainActivity : AppCompatActivity() {
         android:layout_height="match_parent" />
 
 </FrameLayout>
+
+```
+
+## フラグメントマネージャーのバックスタックにフラグメントの追加
+
+フラグメントマネージャーのバックスタックにフラグメントを追加する為に、`FragmentTransaction`の`addToBackStack(name: String?)`メソッドを利用します。
+
+```kotlin
+    private fun showFragmentAndAddToBackstack() {
+        val fm = this.supportFragmentManager
+        fm.beginTransaction().apply {
+            val fragment = MyFragment()
+            add(R.id.fragment_container, fragment)
+            addToBackStack(null) // フラグメントマネージャーのバックスタックを追加する。null: 名前がなし
+        }.commit()
+    }
+```
+
+## バックスタックのバック
+
+バックスタックの前のステートへ戻る為に`FragmentManager`の`popBackStack()`関数を利用します
+
+```kotlin
+    private fun back() {
+        val fm = this.supportFragmentManager
+        fm.popBackStack();
+    }
+
+```
+
+バックスタックの特別のポイントへ戻る時に`FragmentManager`の`popBackStack(name: String?, flag: Int)`
+
+`name`は`Transition.addToBackStack`のメソッドの`name`パラメタの値です。  
+`null`の場合はすべての
+
+```kotlin
+    private fun back(name: String?, isIncluded: Boolean) {
+        val fm = this.supportFragmentManager
+        fm.popBackStack(
+            name,
+            if (isIncluded)
+                FragmentManager.POP_BACK_STACK_INCLUSIVE
+            else
+                0
+        );
+    }
+```
+
+## アニメーション
+
+画面の移動の間にアニメーションを行う時に`FragmentTransaction`の`setCustomAnimations(enter: Int, exit: Int, popEnter: Int, popExit: Int)`
+
+`enter`、`exit`、`popEnter`、`popExit`がアニメーションのリソースIDです
+
+```kotlin
+    private fun showFragmentWithAnimation() {
+        val fm = this.supportFragmentManager
+        fm.beginTransaction().apply {
+            val fragment = MyFragment()
+            setCustomAnimations(
+                R.anim.enter,
+                R.anim.exit,
+                R.anim.popEnter,
+                R.anim.popExit
+            )
+            replace(R.id.fragment_container, fragment)
+            addToBackStack(null) // フラグメントマネージャーのバックスタックを追加する。null: 名前がなし
+        }.commit()
+    }
 
 ```
