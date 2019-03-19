@@ -52,7 +52,7 @@ androidx.fragment.app
 implementation 'androidx.fragment:fragment-ktx:1.0.0'
 ```
 
-## フラグメントの定期
+## フラグメントの定義
 
 ```kotlin
 import androidx.fragment.app.Fragment
@@ -63,9 +63,8 @@ class MyFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View?
-        return inflater.inflate(R.layout.my_fragment, container, false)
-    }
+    ): View? =
+        inflater.inflate(R.layout.my_fragment, container, false)
 
 }
 ```
