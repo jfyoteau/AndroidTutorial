@@ -1,13 +1,12 @@
 package io.github.jfyoteau.androidtutorial
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("AndroidTutorial", "requestCode: $requestCode - resultCode: $resultCode")
     }
 
-    private fun setupViews() {
+    fun setupViews() {
         val menu1Button: Button = findViewById(R.id.button_menu1)
         menu1Button.setOnClickListener {
             Log.d("AndroidTutorial", "menu 1 is clicked")
@@ -44,6 +43,12 @@ class MainActivity : AppCompatActivity() {
                 startActivityWithResult()
             }
         }
+
+        findViewById<Button>(R.id.button_menu5).apply {
+            setOnClickListener {
+                startFragmentActivity()
+            }
+        }
     }
 
     private fun startOtherActivity() {
@@ -54,6 +59,12 @@ class MainActivity : AppCompatActivity() {
     private fun startActivityWithResult() {
         val intent = Intent(this, ResultActivity::class.java)
         startActivityForResult(intent, 1)
+    }
+
+    private fun startFragmentActivity() {
+        // MyFragmentActivityアクティブティを呼び出します
+        val intent = Intent(this, MyFragmentActivity::class.java)
+        startActivity(intent)
     }
 
 }

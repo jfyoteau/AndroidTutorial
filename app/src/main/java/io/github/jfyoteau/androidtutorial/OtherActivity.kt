@@ -1,9 +1,8 @@
 package io.github.jfyoteau.androidtutorial
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class OtherActivity : AppCompatActivity() {
+class OtherActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
