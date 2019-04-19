@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#333333"
-    tools:context=".fragment.SplashFragment">
+    android:background="#ffff00"
+    tools:context=".fragment.Screen1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <Button
-        android:id="@+id/screen1_button"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/screen_1" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
