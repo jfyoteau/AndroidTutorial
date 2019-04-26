@@ -27,6 +27,7 @@ class MyFragmentActivity : AppCompatActivity() {
     fun presentFragment(fragment: Fragment) {
         val fm = this.supportFragmentManager
         fm.beginTransaction().apply {
+            setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right)
             replace(R.id.fragment_container, fragment)
             addToBackStack(null)
         }.commit()
