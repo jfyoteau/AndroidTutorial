@@ -27,7 +27,7 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.screen1_button).apply {
+        view.findViewById<Button>(R.id.screen1_button)?.apply {
             setOnClickListener {
                 val activity = this@SplashFragment.activity as? MyFragmentActivity ?: return@setOnClickListener
                 activity.presentFragment(Screen1Fragment())

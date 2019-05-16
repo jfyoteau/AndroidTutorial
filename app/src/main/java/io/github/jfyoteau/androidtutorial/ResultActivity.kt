@@ -9,7 +9,7 @@ class ResultActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.result_activity)
 
-        findViewById<Button>(R.id.button).apply {
+        findViewById<Button>(R.id.button)?.apply {
             setOnClickListener {
                 setResult(2) // resultCode
                 finish()

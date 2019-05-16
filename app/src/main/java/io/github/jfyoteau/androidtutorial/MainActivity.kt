@@ -26,25 +26,25 @@ open class MainActivity : BaseActivity() {
             Log.d("AndroidTutorial", "menu 1 is clicked")
         }
 
-        findViewById<Button>(R.id.button_menu2).apply {
+        findViewById<Button>(R.id.button_menu2)?.apply {
             setOnClickListener {
                 Toast.makeText(this@MainActivity, R.string.main_toast_message, Toast.LENGTH_SHORT).show()
             }
         }
 
-        findViewById<Button>(R.id.button_menu3).apply {
+        findViewById<Button>(R.id.button_menu3)?.apply {
             setOnClickListener {
                 startOtherActivity()
             }
         }
 
-        findViewById<Button>(R.id.button_menu4).apply {
+        findViewById<Button>(R.id.button_menu4)?.apply {
             setOnClickListener {
                 startActivityWithResult()
             }
         }
 
-        findViewById<Button>(R.id.button_menu5).apply {
+        findViewById<Button>(R.id.button_menu5)?.apply {
             setOnClickListener {
                 startFragmentActivity()
             }

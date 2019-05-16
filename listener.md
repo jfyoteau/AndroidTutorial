@@ -28,7 +28,7 @@ class Activity : AppCompatActivity() {
     // ...
 
     fun setupView() {
-        findViewById<Button>(R.id.button_menu1).apply {
+        findViewById<Button>(R.id.button_menu1)?.apply {
             setOnClickListener {
                 Log.d("AndroidTutorial", "menu 1 is clicked")
             }
