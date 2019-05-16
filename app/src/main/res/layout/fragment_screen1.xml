@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff00"
+    android:background="@color/screen1_background"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".fragment.Screen1Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/title_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginBottom="20dp"
+        android:text="@string/screen1_title" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/screen1_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen1_screen1_button_label" />
+
+    <Button
+        android:id="@+id/screen2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen1_screen2_button_label" />
+
+</LinearLayout>
