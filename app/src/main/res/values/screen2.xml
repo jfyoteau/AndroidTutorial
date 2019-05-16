@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="screen2_background">#00ffff</color>
     <string name="screen2_title">Screen 2</string>
+    <string name="screen2_screen1_button_label">Screen 1</string>
+    <string name="screen2_screen2_button_label">Screen 2</string>
 </resources>
