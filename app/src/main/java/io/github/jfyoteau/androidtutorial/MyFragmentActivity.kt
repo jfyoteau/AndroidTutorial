@@ -3,6 +3,7 @@ package io.github.jfyoteau.androidtutorial
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import io.github.jfyoteau.androidtutorial.fragment.Screen
 import io.github.jfyoteau.androidtutorial.fragment.SplashFragment
 
 class MyFragmentActivity : AppCompatActivity() {
@@ -25,6 +26,9 @@ class MyFragmentActivity : AppCompatActivity() {
     }
 
     fun presentFragment(fragment: Fragment) {
+        val screen = fragment as? Screen
+        val isMenuVisibled = screen?.isMenuVisibled ?: false
+
         val fm = this.supportFragmentManager
         fm.beginTransaction().apply {
             setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right)

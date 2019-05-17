@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import io.github.jfyoteau.androidtutorial.MyFragmentActivity
 import io.github.jfyoteau.androidtutorial.R
 
-class Screen1Fragment : Fragment() {
+class Screen1Fragment : Fragment(), Screen {
+
+    override val isMenuVisibled: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
