@@ -13,7 +13,7 @@ import io.github.jfyoteau.androidtutorial.R
 
 class Screen2Fragment : Fragment(), Screen {
 
-    override val isMenuVisibled: Boolean = false
+    override val isMenuVisible: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
