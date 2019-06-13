@@ -153,13 +153,42 @@ Androidの場合は`coroutineScope`の方を利用します。
 
 ## androidで`coroutine`の使い方
 
-モジュールで下記のdependenciesを追加します
+### モジュールで下記のdependencies
 
 ```groovy
 dependencies {
   ...
   implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:x.x.x"
   implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:x.x.x"
+}
+```
+
+### スコープの作成
+
+```kotlin
+class MyViewModel : ViewModel() {
+
+    private val scope = CoroutineScope(Job() + Dispatcher.Main)
+
+    override fun onCleared() {
+        this.scope.cancel()
+    }
+}
+```
+
+### スコープの使い方
+
+`scope`プロパティのlifecycleがビューモデルと同じです。  
+しなみに、ビューモデルが無くなる時に`scope`をキャンセルします。
+
+```kotlin
+class MyViewModel : ViewModel() {
+    
+    // ...
+
+    fun fireAndForget() = scope.launch {
+        // ...
+    }
 }
 ```
 
