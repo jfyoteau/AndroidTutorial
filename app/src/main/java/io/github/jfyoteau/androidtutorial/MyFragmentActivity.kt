@@ -28,7 +28,7 @@ class MyFragmentActivity : AppCompatActivity() {
 
     fun presentFragment(fragment: Fragment) {
         val screen = fragment as? Screen
-        val isMenuVisibleRequested = screen?.isMenuVisible ?: false
+        val isMenuVisibleRequested = screen?.isBottomMenuVisible ?: false
 
         val fm = this.supportFragmentManager
 
