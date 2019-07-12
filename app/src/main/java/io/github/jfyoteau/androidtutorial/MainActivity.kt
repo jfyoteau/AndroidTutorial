@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import io.github.jfyoteau.androidtutorial.databinding.MainActivityBinding
 
 open class MainActivity : BaseActivity() {
 
+    lateinit var dataBinding: MainActivityBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+//        setContentView(R.layout.main_activity)
+        this.dataBinding = DataBindingUtil.setContentView(this, R.layout.main_activity)
 
         setupViews()
     }
