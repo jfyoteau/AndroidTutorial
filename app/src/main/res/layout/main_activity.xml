@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="io.github.jfyoteau.androidtutorial.MainViewModel" />
     </data>
 
     <LinearLayout
@@ -31,6 +34,7 @@
             android:id="@+id/button_menu2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClickListener="@{() -> viewModel.doMenu2Action()}"
             android:text="@string/main_menu2" />
 
         <Button

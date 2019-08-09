@@ -11,11 +11,17 @@ import io.github.jfyoteau.androidtutorial.databinding.MainActivityBinding
 open class MainActivity : BaseActivity() {
 
     lateinit var dataBinding: MainActivityBinding
+    lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.main_activity)
         this.dataBinding = DataBindingUtil.setContentView(this, R.layout.main_activity)
+
+        // モデルを定義する
+        this.viewModel = MainViewModel(this)
+
+        this.dataBinding.viewModel = this.viewModel
 
         setupViews()
     }
@@ -26,15 +32,10 @@ open class MainActivity : BaseActivity() {
     }
 
     fun setupViews() {
-        val menu1Button: Button = findViewById(R.id.button_menu1)
+//        val menu1Button: Button = findViewById(R.id.button_menu1)
+        val menu1Button = this.dataBinding.buttonMenu1
         menu1Button.setOnClickListener {
             Log.d("AndroidTutorial", "menu 1 is clicked")
-        }
-
-        findViewById<Button>(R.id.button_menu2)?.apply {
-            setOnClickListener {
-                Toast.makeText(this@MainActivity, R.string.main_toast_message, Toast.LENGTH_SHORT).show()
-            }
         }
 
         findViewById<Button>(R.id.button_menu3)?.apply {
