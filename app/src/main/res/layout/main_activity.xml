@@ -28,6 +28,7 @@
             android:id="@+id/button_menu1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClickListener="@{() -> viewModel.doMenu1Action()}"
             android:text="@string/main_menu1" />
 
         <Button
@@ -41,18 +42,21 @@
             android:id="@+id/button_menu3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClickListener="@{() -> viewModel.doMenu3Action()}"
             android:text="@string/main_menu3" />
 
         <Button
             android:id="@+id/button_menu4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClickListener="@{() -> viewModel.doMenu4Action()}"
             android:text="@string/main_menu4" />
 
         <Button
             android:id="@+id/button_menu5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClickListener="@{() -> viewModel.doMenu5Action()}"
             android:text="@string/main_menu5" />
 
     </LinearLayout>

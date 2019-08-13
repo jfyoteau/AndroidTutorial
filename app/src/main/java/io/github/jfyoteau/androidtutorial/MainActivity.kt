@@ -3,8 +3,6 @@ package io.github.jfyoteau.androidtutorial
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import io.github.jfyoteau.androidtutorial.databinding.MainActivityBinding
 
@@ -15,15 +13,12 @@ open class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.main_activity)
         this.dataBinding = DataBindingUtil.setContentView(this, R.layout.main_activity)
 
         // モデルを定義する
         this.viewModel = MainViewModel(this)
 
         this.dataBinding.viewModel = this.viewModel
-
-        setupViews()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -31,43 +26,17 @@ open class MainActivity : BaseActivity() {
         Log.d("AndroidTutorial", "requestCode: $requestCode - resultCode: $resultCode")
     }
 
-    fun setupViews() {
-//        val menu1Button: Button = findViewById(R.id.button_menu1)
-        val menu1Button = this.dataBinding.buttonMenu1
-        menu1Button.setOnClickListener {
-            Log.d("AndroidTutorial", "menu 1 is clicked")
-        }
-
-        findViewById<Button>(R.id.button_menu3)?.apply {
-            setOnClickListener {
-                startOtherActivity()
-            }
-        }
-
-        findViewById<Button>(R.id.button_menu4)?.apply {
-            setOnClickListener {
-                startActivityWithResult()
-            }
-        }
-
-        findViewById<Button>(R.id.button_menu5)?.apply {
-            setOnClickListener {
-                startFragmentActivity()
-            }
-        }
-    }
-
-    private fun startOtherActivity() {
+    fun startOtherActivity() {
         val intent = Intent(this, OtherActivity::class.java)
         startActivity(intent)
     }
 
-    private fun startActivityWithResult() {
+    fun startActivityWithResult() {
         val intent = Intent(this, ResultActivity::class.java)
         startActivityForResult(intent, 1)
     }
 
-    private fun startFragmentActivity() {
+    fun startFragmentActivity() {
         // MyFragmentActivityアクティブティを呼び出します
         val intent = Intent(this, MyFragmentActivity::class.java)
         startActivity(intent)
