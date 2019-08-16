@@ -61,7 +61,7 @@ class MyAdapter(
      */
     class MyViewHolder(
         val textView: TextView
-    ) : RecyclerView.ViewHolder
+    ) : RecyclerView.ViewHolder(textView)
 
     override fun getItemCount() = this.myDataset.size
 
@@ -102,7 +102,7 @@ class MyAdapter(
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!-- A RecyclerView with some commonly used attributes -->
-<android.support.v7.widget.RecyclerView
+<androidx.recyclerview.widget.RecyclerView
     android:id="@+id/my_recycler_view"
     android:scrollbars="vertical"
     android:layout_width="match_parent"
@@ -127,7 +127,7 @@ class MyActivity : Activity() {
             setHasFixedSize(true)
 
             // レイアウトマネージャーを設定する
-            layoutManager = LinearLayoutManager(this)
+            layoutManager = LinearLayoutManager(this@MyActivity)
 
             // アダプターを設定する
             adapter = MyAdapter(myDataset)
