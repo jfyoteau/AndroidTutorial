@@ -24,4 +24,9 @@ class MainViewModel(private val activity: MainActivity) {
     fun doMenu5Action() {
         activity.startFragmentActivity()
     }
+
+    fun doMenu6Action() {
+        activity.startRecyclerViewActivity()
+    }
+
 }

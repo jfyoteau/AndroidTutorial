@@ -6,6 +6,7 @@
     <string name="main_menu3">他のアクティビティ</string>
     <string name="main_menu4">結果のアクティビティ</string>
     <string name="main_menu5">フラグメント</string>
+    <string name="main_menu6">RecyclerViewアクティビティ</string>
 
     <string name="main_toast_message">This is a toast!</string>
 </resources>

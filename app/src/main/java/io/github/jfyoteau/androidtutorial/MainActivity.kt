@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
 import io.github.jfyoteau.androidtutorial.databinding.MainActivityBinding
+import io.github.jfyoteau.androidtutorial.recyclerview.RecyclerViewActivity
 
 open class MainActivity : BaseActivity() {
 
@@ -39,6 +40,11 @@ open class MainActivity : BaseActivity() {
     fun startFragmentActivity() {
         // MyFragmentActivityアクティブティを呼び出します
         val intent = Intent(this, MyFragmentActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun startRecyclerViewActivity() {
+        val intent = Intent(this, RecyclerViewActivity::class.java)
         startActivity(intent)
     }
 
