@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".recyclerview.RecyclerViewActivity"></activity>
-        <activity android:name=".MyFragmentActivity"></activity> <!-- メインアクティビティ -->
+        <activity android:name=".room.RoomActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
+        <activity android:name=".MyFragmentActivity" /> <!-- メインアクティビティ -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
