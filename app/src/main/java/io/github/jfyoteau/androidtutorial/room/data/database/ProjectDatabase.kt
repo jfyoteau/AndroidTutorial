@@ -1,9 +1,9 @@
-package io.github.jfyoteau.androidtutorial.room.ui.room.data.database
+package io.github.jfyoteau.androidtutorial.room.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import io.github.jfyoteau.androidtutorial.room.ui.room.data.entity.Word
-import io.github.jfyoteau.androidtutorial.room.ui.room.data.dao.WordDao
+import io.github.jfyoteau.androidtutorial.room.data.entity.Word
+import io.github.jfyoteau.androidtutorial.room.data.dao.WordDao
 
 @Database(
     entities = [

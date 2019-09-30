@@ -1,13 +1,13 @@
-package io.github.jfyoteau.androidtutorial.room.ui.room.data.database
+package io.github.jfyoteau.androidtutorial.room.data.database
 
 import android.content.Context
 import androidx.room.Room
 
-interface DatabaseResource {
+interface DatabaseFactory {
 
-    fun getDatabase(content: Context): ProjectDatabase
+    fun getDatabase(context: Context): ProjectDatabase
 
-    companion object : DatabaseResource {
+    companion object : DatabaseFactory {
 
         @Volatile
         private var db: ProjectDatabase? = null

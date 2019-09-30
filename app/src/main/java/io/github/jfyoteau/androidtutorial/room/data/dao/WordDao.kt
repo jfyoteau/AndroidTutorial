@@ -1,14 +1,16 @@
-package io.github.jfyoteau.androidtutorial.room.ui.room.data.dao
+package io.github.jfyoteau.androidtutorial.room.data.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
-import io.github.jfyoteau.androidtutorial.room.ui.room.data.entity.Word
+import androidx.room.Query
+import io.github.jfyoteau.androidtutorial.room.data.entity.Word
 
 @Dao
 interface WordDao {
 
+    @Query("select * from word")
     fun findAll(): LiveData<List<Word>>
 
     @Insert
@@ -18,4 +20,3 @@ interface WordDao {
     suspend fun delete(word: Word)
 
 }
-

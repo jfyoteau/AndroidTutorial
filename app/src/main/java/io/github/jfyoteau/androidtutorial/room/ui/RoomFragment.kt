@@ -1,4 +1,4 @@
-package io.github.jfyoteau.androidtutorial.room.ui.room
+package io.github.jfyoteau.androidtutorial.room.ui
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import io.github.jfyoteau.androidtutorial.room.R
+import io.github.jfyoteau.androidtutorial.R
 
 class RoomFragment : Fragment() {
 

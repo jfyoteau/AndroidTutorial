@@ -1,8 +1,9 @@
 package io.github.jfyoteau.androidtutorial.room
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import io.github.jfyoteau.androidtutorial.room.ui.room.RoomFragment
+import androidx.appcompat.app.AppCompatActivity
+import io.github.jfyoteau.androidtutorial.R
+import io.github.jfyoteau.androidtutorial.room.ui.RoomFragment
 
 class RoomActivity : AppCompatActivity() {
 
