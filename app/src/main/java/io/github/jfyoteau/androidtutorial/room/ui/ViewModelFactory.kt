@@ -14,7 +14,7 @@ class ViewModelFactory(
         with(modelClass) {
             when {
                 isAssignableFrom(RoomViewModel::class.java) -> RoomViewModel(domain)
-                else -> throw IllegalArgumentException("不明なmodelClass: ${modelClass.name}")
+                else -> throw IllegalArgumentException("Unknown modelClass: ${modelClass.name}")
             }
         } as T
 

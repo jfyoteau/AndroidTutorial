@@ -8,6 +8,8 @@ interface WordDomain {
 
     fun getWords(): LiveData<List<Word>>
 
-    fun insertWord(scope: CoroutineScope, word: Word)
+    fun addWord(scope: CoroutineScope, word: Word)
+
+    fun removeWord(scope: CoroutineScope, word: Word)
 
 }

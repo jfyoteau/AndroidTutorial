@@ -29,4 +29,7 @@ class MainViewModel(private val activity: MainActivity) {
         activity.startRecyclerViewActivity()
     }
 
+    fun doMenu7Action() {
+        activity.startRoomActivity()
+    }
 }

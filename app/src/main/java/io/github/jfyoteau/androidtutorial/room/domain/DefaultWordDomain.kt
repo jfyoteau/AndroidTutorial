@@ -14,9 +14,15 @@ class DefaultWordDomain(
         return this.repository.getWords()
     }
 
-    override fun insertWord(scope: CoroutineScope, word: Word) {
+    override fun addWord(scope: CoroutineScope, word: Word) {
         scope.launch {
             repository.insert(word)
+        }
+    }
+
+    override fun removeWord(scope: CoroutineScope, word: Word) {
+        scope.launch {
+            repository.delete(word)
         }
     }
 

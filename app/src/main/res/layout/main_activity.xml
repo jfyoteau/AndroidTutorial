@@ -28,43 +28,50 @@
             android:id="@+id/button_menu1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClickListener="@{() -> viewModel.doMenu1Action()}"
+            android:onClick="@{() -> viewModel.doMenu1Action()}"
             android:text="@string/main_menu1" />
 
         <Button
             android:id="@+id/button_menu2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClickListener="@{() -> viewModel.doMenu2Action()}"
+            android:onClick="@{() -> viewModel.doMenu2Action()}"
             android:text="@string/main_menu2" />
 
         <Button
             android:id="@+id/button_menu3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClickListener="@{() -> viewModel.doMenu3Action()}"
+            android:onClick="@{() -> viewModel.doMenu3Action()}"
             android:text="@string/main_menu3" />
 
         <Button
             android:id="@+id/button_menu4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClickListener="@{() -> viewModel.doMenu4Action()}"
+            android:onClick="@{() -> viewModel.doMenu4Action()}"
             android:text="@string/main_menu4" />
 
         <Button
             android:id="@+id/button_menu5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClickListener="@{() -> viewModel.doMenu5Action()}"
+            android:onClick="@{() -> viewModel.doMenu5Action()}"
             android:text="@string/main_menu5" />
 
         <Button
             android:id="@+id/button_menu6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClickListener="@{() -> viewModel.doMenu6Action()}"
+            android:onClick="@{() -> viewModel.doMenu6Action()}"
             android:text="@string/main_menu6" />
+
+        <Button
+            android:id="@+id/button_menu7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.doMenu7Action()}"
+            android:text="@string/main_menu7" />
 
     </LinearLayout>
 </layout>

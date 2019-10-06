@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.databinding.DataBindingUtil
 import io.github.jfyoteau.androidtutorial.databinding.MainActivityBinding
 import io.github.jfyoteau.androidtutorial.recyclerview.RecyclerViewActivity
+import io.github.jfyoteau.androidtutorial.room.RoomActivity
 
 open class MainActivity : BaseActivity() {
 
@@ -45,6 +46,11 @@ open class MainActivity : BaseActivity() {
 
     fun startRecyclerViewActivity() {
         val intent = Intent(this, RecyclerViewActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun startRoomActivity() {
+        val intent = Intent(this, RoomActivity::class.java)
         startActivity(intent)
     }
 

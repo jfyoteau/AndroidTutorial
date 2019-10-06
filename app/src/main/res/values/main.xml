@@ -7,6 +7,7 @@
     <string name="main_menu4">結果のアクティビティ</string>
     <string name="main_menu5">フラグメント</string>
     <string name="main_menu6">RecyclerViewアクティビティ</string>
+    <string name="main_menu7">Roomアクティビティ</string>
 
     <string name="main_toast_message">This is a toast!</string>
 </resources>

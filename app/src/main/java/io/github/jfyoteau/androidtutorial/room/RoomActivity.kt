@@ -11,8 +11,8 @@ class RoomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.room_activity)
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, RoomFragment.newInstance())
+            this.supportFragmentManager.beginTransaction()
+                .replace(R.id.container, RoomFragment())
                 .commitNow()
         }
     }
