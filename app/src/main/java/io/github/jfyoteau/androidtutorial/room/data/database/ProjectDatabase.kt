@@ -1,6 +1,7 @@
 package io.github.jfyoteau.androidtutorial.room.data.database
 
 import androidx.room.Database
+import androidx.room.RoomDatabase
 import io.github.jfyoteau.androidtutorial.room.data.dao.WordDao
 import io.github.jfyoteau.androidtutorial.room.data.entity.Word
 
@@ -10,7 +11,7 @@ import io.github.jfyoteau.androidtutorial.room.data.entity.Word
     ],
     version = 1
 )
-abstract class ProjectDatabase {
+abstract class ProjectDatabase : RoomDatabase() {
 
     abstract fun wordDao(): WordDao
 
